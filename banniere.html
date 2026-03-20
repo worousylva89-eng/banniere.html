@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bannière Sylva</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Jost', sans-serif; background: #0E0E0E; }
+    .banner {
+      width: 100vw; min-height: 56.25vw;
+      background: #0E0E0E;
+      position: relative;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 8vw 6vw; overflow: hidden; text-align: center;
+    }
+    .circle {
+      position: absolute; border-radius: 50%;
+      border: 1px solid rgba(201,168,76,0.15);
+      pointer-events: none;
+    }
+    .c1 { width: 80vw; height: 80vw; top: -30vw; right: -20vw; }
+    .c2 { width: 50vw; height: 50vw; top: -10vw; right: 10vw; }
+    .c3 { width: 60vw; height: 60vw; bottom: -30vw; left: -20vw; border-color: rgba(201,168,76,0.07); }
+    .line-h { width: 60px; height: 1px; background: rgba(201,168,76,0.5); margin: 3vw auto; }
+    .tag {
+      font-size: clamp(8px, 2.2vw, 13px);
+      letter-spacing: 0.35em; text-transform: uppercase; color: #C9A84C;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      margin-bottom: 2vw;
+    }
+    .tag::before, .tag::after { content: ''; width: 25px; height: 1px; background: #C9A84C; opacity: 0.6; }
+    .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 12vw, 90px);
+      font-weight: 300; line-height: 1; color: #F5F0E8; letter-spacing: 0.02em;
+    }
+    .name em { display: block; font-style: italic; color: #E8CC7A; }
+    .title {
+      font-size: clamp(8px, 2.5vw, 14px);
+      letter-spacing: 0.2em; text-transform: uppercase; color: #D4C5A9; margin-top: 2vw;
+    }
+    .skills { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 3vw; }
+    .skill {
+      border: 1px solid rgba(201,168,76,0.4); color: #C9A84C;
+      font-size: clamp(7px, 1.8vw, 11px); letter-spacing: 0.15em;
+      text-transform: uppercase; padding: 4px 12px;
+    }
+    .stats { display: flex; gap: 6vw; justify-content: center; margin-top: 4vw; }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(24px, 7vw, 52px); font-weight: 300; color: #C9A84C; line-height: 1;
+    }
+    .stat-label { font-size: clamp(6px, 1.6vw, 10px); letter-spacing: 0.2em; text-transform: uppercase; color: #666; margin-top: 3px; }
+    .bottom-line {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(to right, transparent, #C9A84C 30%, #E8CC7A 50%, #C9A84C 70%, transparent);
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+    <div class="tag">Développeur Web Front-End</div>
+    <div class="name">Sylva <em>Worou</em></div>
+    <div class="title">HTML · CSS · JavaScript · React</div>
+    <div class="line-h"></div>
+    <div class="skills">
+      <span class="skill">Landing Pages</span>
+      <span class="skill">Responsive Design</span>
+      <span class="skill">React</span>
+      <span class="skill">Cotonou · Bénin</span>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">4+</div>
+        <div class="stat-label">Projets</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">25$</div>
+        <div class="stat-label">/ heure</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Satisfaction</div>
+      </div>
+    </div>
+    <div class="bottom-line"></div>
+  </div>
+</body>
+</html>
